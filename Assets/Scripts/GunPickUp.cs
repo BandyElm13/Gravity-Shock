@@ -1,3 +1,5 @@
+using System;
+using Unity.VisualScripting;
 using UnityEditor.Rendering;
 using UnityEditor.UI;
 using UnityEngine;
@@ -7,6 +9,7 @@ public class GunPickUp : MonoBehaviour
     private float speed = 90f;
     [SerializeField] private GameObject bruh;
     [SerializeField] private GameObject playerbruh;
+    [SerializeField] private GameObject bullet;
     public void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
@@ -25,5 +28,13 @@ public class GunPickUp : MonoBehaviour
     void Update()
     {
         transform.Rotate(Vector3.right * speed * Time.deltaTime, Space.Self);
+    }
+
+    public void shoot()
+    {
+        //is playerGun enabled?
+        //has player pressed rightclick
+        // spawn(bullet)
+        //bullet travels along a stait line. with Player stat.damage.
     }
 }

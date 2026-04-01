@@ -39,13 +39,13 @@ public class EnemyAI : MonoBehaviour
             case EnemyState.Chase:
                 if(playerDistance > chaseRange)
                 {
-                    current = EnemyState.Idle;
+                current = EnemyState.Idle;
                 } else if(playerDistance <= attackRange)
                 {
                     current = EnemyState.Attack;
                 } else
                 {
-                    Vector3 direction = (player.position -= transform.position).normalized;
+                    Vector3 direction = (player.position - transform.position).normalized;
                     transform.position += direction * stats.speed * Time.deltaTime;
                 }
                 break;
