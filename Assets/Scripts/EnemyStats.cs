@@ -15,6 +15,14 @@ public class EnemyStats : MonoBehaviour
         currentHealth = 100f;
     }
 
+    private void Die()
+    {
+        if(currentHealth == 0)
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {

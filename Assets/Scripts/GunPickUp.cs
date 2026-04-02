@@ -29,12 +29,4 @@ public class GunPickUp : MonoBehaviour
     {
         transform.Rotate(Vector3.right * speed * Time.deltaTime, Space.Self);
     }
-
-    public void shoot()
-    {
-        //is playerGun enabled?
-        //has player pressed rightclick
-        // spawn(bullet)
-        //bullet travels along a stait line. with Player stat.damage.
-    }
 }
