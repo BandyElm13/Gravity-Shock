@@ -1,9 +1,6 @@
-using System;
-using System.Collections;
-using System.Threading;
-using NUnit.Framework.Internal;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -11,6 +8,7 @@ public class PlayerStats : MonoBehaviour
         private float currentHealth;
 
         [SerializeField] private Slider healthBar;
+        [SerializeField] private string dead;
   
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,6 +25,13 @@ public class PlayerStats : MonoBehaviour
         healthBar.value = currentHealth;
     }
 
+    private void PlayerDeath()
+    {
+        if(currentHealth == 0)
+        {
+            SceneManager.LoadScene(dead);
+        }
+    }
     public void testDamage()
     {
         if(Input.GetKeyDown(KeyCode.G))
@@ -39,6 +44,7 @@ public class PlayerStats : MonoBehaviour
     void Update()
     {
         testDamage();
+        PlayerDeath();
     }
 
 }
