@@ -27,6 +27,6 @@ public class GunPickUp : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(Vector3.right * speed * Time.deltaTime, Space.Self);
+        transform.Rotate(Vector3.up * speed * Time.deltaTime, Space.Self);
     }
 }

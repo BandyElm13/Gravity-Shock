@@ -11,7 +11,6 @@ public class MainMenu : MonoBehaviour
     }
     [SerializeField] private string playGame;
     [SerializeField] private string totorial;
-    [SerializeField] private string exit;
 
     public void PlayGame()
     {

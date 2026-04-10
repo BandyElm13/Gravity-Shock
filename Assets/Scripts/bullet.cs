@@ -13,7 +13,7 @@ public class bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Hit something: " + other.gameObject.name + " tag: " + other.tag);
+        //Debug.Log("Hit something: " + other.gameObject.name + " tag: " + other.tag);
         if (hit) return;
         if (other.CompareTag("Player")) return;
         if (other.CompareTag("Gun")) return;
@@ -21,7 +21,7 @@ public class bullet : MonoBehaviour
         hit = true;
 
         if(other.CompareTag("Enemy")) {
-            Debug.Log("Enemy has been hit");
+            //Debug.Log("Enemy has been hit");
             EnemyStats enemy = other.gameObject.GetComponentInParent<EnemyStats>();
             if (enemy != null)
             {
