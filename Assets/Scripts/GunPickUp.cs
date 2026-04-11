@@ -1,7 +1,3 @@
-using System;
-using Unity.VisualScripting;
-using UnityEditor.Rendering;
-using UnityEditor.UI;
 using UnityEngine;
 
 public class GunPickUp : MonoBehaviour
